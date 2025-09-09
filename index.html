@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador CSV Simple</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header>
+            <h1>Visualizador CSV Simple</h1>
+            <div class="controls">
+                <button id="themeToggle" class="btn" aria-label="Cambiar tema">🌙</button>
+                <button id="fontSizeBtn" class="btn" aria-label="Ajustar tamaño de letra">A+</button>
+                <button id="contrastBtn" class="btn" aria-label="Alto contraste">🎨</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="file-upload">
+                    <input type="file" id="fileInput" accept=".csv" class="file-input">
+                    <label for="fileInput" class="btn">📂 Cargar archivo CSV</label>
+                    <span id="fileName">Ningún archivo seleccionado</span>
+                </div>
+                <div class="csv-input">
+                    <label for="csvData">O pega tus datos CSV aquí:</label>
+                    <textarea id="csvData" rows="5" placeholder="Ejemplo:
+Año,Ventas,Gastos,Beneficio
+2020,10000,7000,3000
+2021,12000,8000,4000"></textarea>
+                </div>
+                <button id="parseBtn" class="btn primary">Procesar CSV</button>
+            </section>
+
+            <section id="dataSection" class="hidden">
+                <div class="chart-controls">
+                    <div class="form-group">
+                        <label for="xAxis">Eje X:</label>
+                        <select id="xAxis" class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="yAxis">Eje Y:</label>
+                        <select id="yAxis" class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="chartType">Tipo de gráfico:</label>
+                        <select id="chartType" class="form-control">
+                            <option value="bar">Barras</option>
+                            <option value="line">Líneas</option>
+                            <option value="pie">Circular</option>
+                            <option value="doughnut">Anillo</option>
+                        </select>
+                    </div>
+                    <button id="generateChartBtn" class="btn primary">Generar Gráfico</button>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="table">Tabla</button>
+                    <button class="tab-btn" data-tab="chart">Gráfico</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="tableTab" class="tab-pane active">
+                        <div class="table-container">
+                            <table id="dataTable">
+                                <thead>
+                                    <tr id="tableHeader"></tr>
+                                </thead>
+                                <tbody id="tableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="chartTab" class="tab-pane">
+                        <div class="chart-container">
+                            <canvas id="chartCanvas"></canvas>
+                        </div>
+                        <button id="exportChartBtn" class="btn" disabled>💾 Exportar Gráfico</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Visualizador CSV Simple &copy; 2025</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
