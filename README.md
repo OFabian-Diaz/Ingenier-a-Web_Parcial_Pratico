@@ -107,21 +107,7 @@ Puedes personalizar la aplicación modificando los siguientes archivos:
 - Para conjuntos de datos grandes, considera reducir el número de puntos de datos
 - Cierra otras pestañas o aplicaciones que puedan estar consumiendo recursos
 
-## Contribuciones
 
-Las contribuciones son bienvenidas. Por favor, envía un pull request o abre un issue para discutir los cambios propuestos.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más información.
-
-## Créditos
-
-Desarrollado por [Tu Nombre] - [Tu Sitio Web o Perfil]
-
-## Contacto
-
-Si tienes preguntas o comentarios, no dudes en contactarme en [tu@email.com]
 
 ---
 
@@ -129,3 +115,4 @@ Si tienes preguntas o comentarios, no dudes en contactarme en [tu@email.com]
   <p>Hecho con ❤️ para visualizar datos de manera sencilla</p>
   <p>Última actualización: Septiembre 2023</p>
 </div>
+
