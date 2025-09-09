@@ -2,6 +2,9 @@
 
 Una aplicación web interactiva para cargar, visualizar y exportar datos en formato CSV. La aplicación permite a los usuarios cargar archivos CSV, visualizar los datos en una tabla y generar gráficos interactivos de diferentes tipos.
 
+link
+https://ofabian-diaz.github.io/Ingenier-a-Web_Parcial_Pratico/ 
+
 ## Características
 
 - **Carga de datos CSV** desde archivo o pegado directo
@@ -115,4 +118,5 @@ Puedes personalizar la aplicación modificando los siguientes archivos:
   <p>Hecho con ❤️ para visualizar datos de manera sencilla</p>
   <p>Última actualización: Septiembre 2023</p>
 </div>
+
 
